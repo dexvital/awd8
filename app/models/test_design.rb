@@ -1,0 +1,2 @@
+class TestDesign < ApplicationRecord
+end

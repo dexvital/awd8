@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :test_designs
   get "admin" => "admin#index"
+
+  resources :support_requests, only: %i[ index update ]
 
   resources :users
   resources :products
