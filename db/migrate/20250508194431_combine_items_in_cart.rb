@@ -22,8 +22,6 @@ class CombineItemsInCart < ActiveRecord::Migration[8.0]
     # split items with quantity>1 into multiple items
     LineItem.where("quantity>1").each do |line_item|
       # add individual items
-      Chapter 10. Task E: A Smarter Cart • 134
-      report erratum • discuss
       line_item.quantity.times do
         LineItem.create(
           cart_id: line_item.cart_id,

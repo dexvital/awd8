@@ -3,6 +3,8 @@ require "application_system_test_case"
 class TestDesignsTest < ApplicationSystemTestCase
   setup do
     @test_design = test_designs(:one)
+    @user = users(:one)
+    login_as @user
   end
 
   test "visiting the index" do
